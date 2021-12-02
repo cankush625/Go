@@ -41,4 +41,33 @@ func main() {
 		{"AB Deviliars", 96},
 	}
 	fmt.Println(team)
+
+	// Slice with make
+	sl := make([]int, 5)
+	fmt.Println(sl)
+	fmt.Println("Length", len(sl), "and capacity", cap(sl), "of sl")
+
+	// Slice with make and specify capacity using third argument to make
+	// Slice of length 2 and capacity 5
+	sls := make([]int, 2, 5)
+	fmt.Println(sls)
+	fmt.Println("Length", len(sls), "and capacity", cap(sls), "of sls")
+
+	// Slices of slices
+	board := [][]string{
+		[]string{"a", "b", "c"},
+		[]string{"d", "e", "f"},
+	}
+	fmt.Println(board)
+	board[1][2] = "g"
+	fmt.Println(board)
+
+	// Append to slice
+	s := []int{1, 2}
+	fmt.Println(s)
+	s = append(s, 3)
+	fmt.Println(s)
+	// append multiple values
+	s = append(s, 4, 5)
+	fmt.Println(s)
 }

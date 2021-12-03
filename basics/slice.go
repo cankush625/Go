@@ -70,4 +70,20 @@ func main() {
 	// append multiple values
 	s = append(s, 4, 5)
 	fmt.Println(s)
+
+	// range with slice
+	square := []int{0, 1, 4, 9, 16, 25}
+	for i, sq := range square {
+		fmt.Printf("Square of %d is %d\n", i, sq)
+	}
+
+	// get only index from slice
+	for i := range square {
+		fmt.Println(i)
+	}
+
+	// skip the index and get only value from range with slice
+	for _, val := range square {
+		fmt.Println(val)
+	}
 }
